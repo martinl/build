@@ -38,7 +38,8 @@ elif [[ $BOOTCONFIG == *3328* ]]; then
 
 elif [[ $BOARD == rockpi-4* ]]; then
 
-	BOOT_USE_BLOBS=yes
+	BOOT_USE_TPL_SPL_BLOB=yes
+	BOOT_SUPPORT_SPI=yes
 	BOOT_SOC=rk3399
 	DDR_BLOB='rk33/rk3399_ddr_933MHz_v1.20.bin' # 1GB model does not boot with later versions
 	MINILOADER_BLOB='rk33/rk3399_miniloader_v1.19.bin'
